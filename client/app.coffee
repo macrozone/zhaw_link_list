@@ -8,6 +8,8 @@ Router.map ->
 
 Template.userList.users = ->
 	Meteor.users.find()
+Template.userList.numberOfLinks = ->
+	Links.find({userID: @_id}).count()
 
 Handlebars.registerHelper 'username', ->
 

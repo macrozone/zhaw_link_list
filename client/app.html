@@ -61,7 +61,7 @@
 <template name="userList">
 <ul>
     {{#each users}}
-    <li><a href="{{pathFor 'user'}}">{{username}} {{email}}</a></li>
+    <li><a href="{{pathFor 'user'}}">{{username}} ({{numberOfLinks}})</a></li>
     {{/each}}
 </ul>
 
