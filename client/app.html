@@ -48,21 +48,38 @@
 
 <template name="home">
 
+    {{>welcomeMessage}}
    <h1>ZHAW link list</h1>
+
+
+
    <p>you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-) </p>
    <p>please add change requests to <a href="https://github.com/macrozone/zhaw_link_list" target="_blank">github</a> issue list</p>
   
     <h2>all users</h2>
     {{>userList}}
 
+
+
 </template>
 
 
 <template name="userList">
-<ul>
+<ul class="userList">
     {{#each users}}
-    <li><a href="{{pathFor 'user'}}">{{username}} ({{numberOfLinks}})</a></li>
+    <li>{{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}</a></li>
     {{/each}}
 </ul>
 
+</template>
+
+<template name="welcomeMessage">
+{{#with currentUser}}
+<p><em>Hello <strong>{{username}}</strong>, you have {{>numberOfLinksBadge}} links shared</em></p>
+{{/with}}
+</template>
+
+
+<template name="numberOfLinksBadge">
+<span class="badge badge">{{numberOfLinks}}</span>
 </template>
