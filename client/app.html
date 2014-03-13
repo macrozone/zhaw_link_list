@@ -87,5 +87,7 @@
 <template name="profilePicture">
 {{#if services.google.picture}}
 <img src="{{services.google.picture}}" height="50px"/>
+{{else}}
+<img src="/no-pic.jpg" height="50px"/>
 {{/if}}
 </template>
