@@ -10,6 +10,7 @@ Template.userList.users = ->
 	Meteor.users.find()
 
 Handlebars.registerHelper 'username', ->
+	
 		if @profile? and @profile.name?
 			@profile.name
 		else if @username?

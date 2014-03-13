@@ -1,7 +1,7 @@
 
 
 <template name="user">
-<h1>Links of {{user.username}}</h1>
+<h1>Links of {{#with user}}{{username}}{{/with}}</h1>
 <table class="table">
 
 <tr>
