@@ -5,7 +5,7 @@
 <table class="table">
 
 <tr>
-	<th>Label</th><th>url</th>
+	<th>Topic</th><th>Label</th><th>url</th>
 	{{#if isOwner}}
 	<th>options</th>
 	{{/if}}
@@ -24,6 +24,8 @@
 <template name="oneLink">
 
 <tr>
+<td>{{topic}}</td>
+
 <td><a target="_blank" href="{{url}}">{{label}}</a></td>
 
 <td><a target="_blank" href="{{url}}">{{url}}</a></td>
@@ -39,8 +41,9 @@
 
 </template>
 <template name="addNewLink">
-<input type="text" class="link-url" placeholder="url" /><br />
+<input type="text" class="link-topic" placeholder="topic" /><br /><br />
+<input type="text" class="link-url" placeholder="url" /><br /><br />
 <input type="text" class="link-label" placeholder="label" />
-<br/>
+<br/><br />
 <button class="btn-save btn btn-default">add</button>
 </template>
