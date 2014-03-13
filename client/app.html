@@ -67,7 +67,7 @@
 <template name="userList">
 <ul class="userList">
     {{#each users}}
-    <li>{{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}</a></li>
+    <li>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}</a></li>
     {{/each}}
 </ul>
 
@@ -82,4 +82,10 @@
 
 <template name="numberOfLinksBadge">
 <span class="badge badge">{{numberOfLinks}}</span>
+</template>
+
+<template name="profilePicture">
+{{#if services.google.picture}}
+<img src="{{services.google.picture}}" height="50px"/>
+{{/if}}
 </template>
