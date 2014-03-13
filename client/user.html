@@ -1,0 +1,46 @@
+
+
+<template name="user">
+<h1>Links of {{user.username}}</h1>
+<table class="table">
+
+<tr>
+	<th>Label</th><th>url</th>
+	{{#if isOwner}}
+	<th>options</th>
+	{{/if}}
+</tr>
+{{#each links}}
+{{>oneLink}}
+{{/each}}
+</table>
+
+{{#if isOwner}}
+<p>that's you, you can add new links here:</p>
+	{{>addNewLink}}
+{{/if}}
+</template>
+
+<template name="oneLink">
+
+<tr>
+<td><a href="{{url}}">{{label}}</a></td>
+
+<td><a href="{{url}}">{{url}}</a></td>
+{{#if isOwner}}
+	<td>
+		<button type="button" class="btn-remove btn btn-warning">
+	  <span class="glyphicon glyphicon-remove"></span> Remove
+	</button>
+
+	</td>
+{{/if}}
+</tr>
+
+</template>
+<template name="addNewLink">
+<input type="text" class="link-url" placeholder="url" /><br />
+<input type="text" class="link-label" placeholder="label" />
+<br/>
+<button class="btn-save btn btn-default">add</button>
+</template>
