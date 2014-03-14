@@ -22,7 +22,8 @@ Template.addNewLink.events
 		label = $(template.find ".link-label").val()
 		topic = $(template.find ".link-topic").val()
 		if url?.length > 0 and label?.length > 0
-			Links.insert 
+			
+			Meteor.call "addLink",
 				url: url
 				label: label
 				topic: topic

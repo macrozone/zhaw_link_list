@@ -5,7 +5,6 @@ Router.map ->
     path: "/"
 
 
-
 Template.userList.users = ->
 	Meteor.users.find()
 	
