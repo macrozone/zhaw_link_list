@@ -24,6 +24,7 @@ Meteor.methods
 				from: authorEmail
 				subject: "ZHAW List, new Link added"
 				text: "#{authorEmail} added a new link. Goto http://zhaw-list.macrozone.ch"
+			console.log message
 			if email
 				Email.send message
 
