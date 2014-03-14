@@ -6,8 +6,8 @@ getEmailFrom = (user) ->
 	
 	if user.emails?[0]?
 		user.emails[0].address
-	else if services?.google?.email?
-		services.google.email
+	else if user.services?.google?.email?
+		user.services.google.email
 
 
 Meteor.methods
