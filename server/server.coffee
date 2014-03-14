@@ -4,7 +4,7 @@ Meteor.startup ->
 
 getEmailFrom = (user) ->
 	
-	if user.emails[0]?
+	if user.emails?[0]?
 		user.emails[0].address
 	else if services?.google?.email?
 		services.google.email
