@@ -26,7 +26,7 @@ Meteor.methods
 				to: email
 				from: authorEmail
 				subject: "ZHAW List, new Link added"
-				html: "#{authorEmail} added a new link:\n\n#{link.url}\n\nGoto #{url} to see all his links"
+				html: "<p><strong>#{authorEmail}</strong> added a new link:<br/><br/><a href='#{link.url}'>#{link.url}</a><br/></p><p>Goto a href='#{url}'>#{url}</a> to see all his links</p>"
 	
 			if email
 				Email.send message
