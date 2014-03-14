@@ -1,6 +1,8 @@
 Meteor.startup ->
 	process.env.MAIL_URL = 'smtp://postmaster%40sandbox74845.mailgun.org:987c0segtxh4@smtp.mailgun.org:587';
 
+getFullUrlFor = (userID) ->
+	Meteor.absoluteUrl()+Router.routes['user'].path _id: userID
 
 getEmailFrom = (user) ->
 	
@@ -19,12 +21,13 @@ Meteor.methods
 		users.forEach (user) ->
 			email = getEmailFrom user
 			authorEmail = getEmailFrom authorUser
+			url = getFullUrlFor link.userID
 			message = 
 				to: email
 				from: authorEmail
 				subject: "ZHAW List, new Link added"
-				text: "#{authorEmail} added a new link. Goto http://zhaw-list.macrozone.ch"
-			console.log message
+				html: "#{authorEmail} added a new link:\n\n#{link.url}\n\nGoto #{url} to see all his links"
+	
 			if email
 				Email.send message
 

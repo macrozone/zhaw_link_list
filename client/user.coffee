@@ -1,9 +1,4 @@
-Router.map ->
-  @route 'user',
-    path: "/user/:_id"
-    data: ->
-      user: Meteor.users.findOne {_id: @params._id}
-      links: Links.find {userID: @params._id}, sort: topic: 1
+
 
 Template.user.isOwner = ->
 	@user._id == Meteor.user()._id
@@ -28,6 +23,7 @@ Template.addNewLink.events
 				label: label
 				topic: topic
 				userID: Meteor.user()._id
+				
 			$(template.find ".link-url").val ""
 			$(template.find ".link-label").val ""
 			$(template.find ".link-topic").val ""
