@@ -2,7 +2,7 @@ Meteor.startup ->
 	process.env.MAIL_URL = 'smtp://postmaster%40sandbox74845.mailgun.org:987c0segtxh4@smtp.mailgun.org:587';
 
 getFullUrlFor = (userID) ->
-	Meteor.absoluteUrl()+Router.routes['user'].path _id: userID
+	Meteor.absoluteUrl().replace(/\/$/, "")+Router.routes['user'].path _id: userID
 
 getEmailFrom = (user) ->
 	
@@ -26,7 +26,7 @@ Meteor.methods
 				to: email
 				from: authorEmail
 				subject: "ZHAW List, new Link added"
-				html: "<p><strong>#{authorEmail}</strong> added a new link:<br/><br/><a href='#{link.url}'>#{link.url}</a><br/></p><p>Goto a href='#{url}'>#{url}</a> to see all his links</p>"
+				html: "<p><strong>#{authorEmail}</strong> added a new link for the topic <em>#{link.topic}</em>:<br/><br/><a href='#{link.url}'>#{link.label}</a><br/></p><p>Click <a href='#{url}'>here</a> to see all his links</p>"
 	
 			if email
 				Email.send message
