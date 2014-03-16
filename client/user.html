@@ -2,6 +2,7 @@
 
 <template name="user">
 <h1>Links of {{#with user}}{{username}}{{/with}}</h1>
+<div class="table-responsive">
 <table class="table">
 
 <tr>
@@ -14,6 +15,7 @@
 {{>oneLink}}
 {{/each}}
 </table>
+</div>
 
 {{#if isOwner}}
 <p>that's you, you can add new links here:</p>

@@ -1,11 +1,11 @@
 <template name="comments">
-<table class="table table-condensed">
+<table style="white-space: normal;" class="table table-condensed">
 	{{#each comments}}
 		<tr>
 			<th>{{#with user}} {{username}} {{/with}}
 			</th>
 			<td>{{formatDate itime "medium"}}</td>
-			<td>{{comment}}</td>
+			<td><p style="min-width: 200px;" >{{comment}}</p></td>
 		</tr>
 		{{/each}}
 
