@@ -13,6 +13,7 @@ Template.addComment.events
 				itime: new Date().getTime()
 				comment: text,
 
-
+Template.comments.comment = ->
+	@comment.replace(/\n/g, "<br />") 
 Template.comments.user = ->
 	Meteor.users.findOne _id: @userID
