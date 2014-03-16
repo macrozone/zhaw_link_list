@@ -1,6 +1,7 @@
 
 
 Template.user.isOwner = ->
+	if @user? && Meteor.user()?
 	@user._id == Meteor.user()._id
 
 Template.oneLink.isOwner = ->
