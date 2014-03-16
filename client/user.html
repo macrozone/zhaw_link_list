@@ -5,7 +5,7 @@
 <table class="table">
 
 <tr>
-	<th>Topic</th><th>Label</th><th>url</th>
+	<th>Topic</th><th>Link</th><th width="60%">Comments</th>
 	{{#if isOwner}}
 	<th>options</th>
 	{{/if}}
@@ -21,25 +21,7 @@
 {{/if}}
 </template>
 
-<template name="oneLink">
 
-<tr>
-<td>{{topic}}</td>
-
-<td><a target="_blank" href="{{url}}">{{label}}</a></td>
-
-<td><a target="_blank" href="{{url}}">{{url}}</a></td>
-{{#if isOwner}}
-	<td>
-		<button type="button" class="btn-remove btn btn-warning">
-	  <span class="glyphicon glyphicon-remove"></span> Remove
-	</button>
-
-	</td>
-{{/if}}
-</tr>
-
-</template>
 <template name="addNewLink">
 <input type="text" class="link-topic" placeholder="topic" /><br /><br />
 <input type="text" class="link-url" placeholder="url" /><br /><br />

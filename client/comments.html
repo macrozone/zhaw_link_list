@@ -1,0 +1,23 @@
+<template name="comments">
+<table class="table table-condensed">
+	{{#each comments}}
+		<tr>
+			<th>{{#with user}} {{username}} {{/with}}
+			</th>
+			<td>{{formatDate itime "medium"}}</td>
+			<td>{{comment}}</td>
+		</tr>
+		{{/each}}
+
+{{>addComment}}
+</table>
+</template>
+
+<template name="addComment">
+<tr><td colspan="2">
+<textarea style="width: 100%; height: 80px"/>
+</td><td style="vertical-align: bottom" >
+<button class="btn btn-default btn-xs btn-add-comment">Add Comment</button>
+</td></tr>
+
+</template>

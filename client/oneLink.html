@@ -1,0 +1,22 @@
+<template name="oneLink">
+
+<tr>
+<td>{{topic}}</td>
+
+<td><a target="_blank" href="{{url}}">{{label}}</a></td>
+
+<td>
+{{>comments}}
+</td>
+{{#if isOwner}}
+	<td>
+		<button type="button" class="btn-remove btn btn-warning">
+	  <span class="glyphicon glyphicon-remove"></span> Remove
+	</button>
+
+	</td>
+{{/if}}
+</tr>
+
+</template>
+
