@@ -1,14 +1,14 @@
 
 
 Template.comments.comments = ->
-	Comments.find {linkID: @_id, userID: @userID }
+	Comments.find {linkID: @_id}
 
 Template.addComment.events
 	"click .btn-add-comment": (event, template)->
 		text = $(template.find "textarea").val()
 		if text?.length > 0
-			Comments.insert 
-				userID: @userID
+			Meteor.call "addComment",
+				userID: Meteor.userId()
 				linkID: @_id
 				itime: new Date().getTime()
 				comment: text,
