@@ -5,7 +5,8 @@
       "iron-router": {},
       "bootstrap-3": {},
       "accounts-ui-bootstrap-3": {},
-      "handlebar-helpers": {}
+      "handlebar-helpers": {},
+      "moment": {}
     },
     "packages": {
       "iron-router": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/raix/Meteor-handlebar-helpers.git",
         "tag": "v0.0.9",
         "commit": "71e94c99462b8801a34c5363510758b6ff5f5ac7"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.5.1",
+        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
       }
     }
   }

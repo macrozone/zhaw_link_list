@@ -17,3 +17,15 @@ Handlebars.registerHelper 'username', ->
 		@services.github.username
 	else
 		@_id
+
+DateFormats = 
+       short: "DD.MM.YYYY",
+       medium: "DD.MM.YYYY HH:mm"
+       long: "dddd DD.MM.YYYY HH:mm"
+
+Handlebars.registerHelper "formatDate", (datetime, format) ->
+  if moment
+    f = DateFormats[format]
+    moment(datetime).format f
+  else
+    datetime

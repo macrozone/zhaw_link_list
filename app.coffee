@@ -2,6 +2,7 @@ Router.configure layoutTemplate: 'layout'
 
 
 @Links = new Meteor.Collection "links"
+@Comments = new Meteor.Collection "comments"
 
 Router.map ->
   @route 'home',
