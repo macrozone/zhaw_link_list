@@ -16,7 +16,6 @@
 
 <div class="container">
      {{#if currentUser}}
-
         {{yield}}
     {{else}}
         {{>notLoggedIn}}
@@ -67,7 +66,7 @@
 <template name="userList">
 <ul class="userList">
     {{#each users}}
-    <li>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}</a></li>
+    <li {{#if isUser}}class="you"{{/if}}>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></li>
     {{/each}}
 </ul>
 

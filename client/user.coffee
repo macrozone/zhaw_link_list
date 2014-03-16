@@ -1,13 +1,6 @@
 
 
-Template.user.isOwner = ->
-	if @user? && Meteor.user()?
-		@user._id == Meteor.user()._id
-	else
-		false
 
-Template.oneLink.isOwner = ->
-	@userID == Meteor.user()._id
 
 Template.oneLink.events
 	"click .btn-remove": ->

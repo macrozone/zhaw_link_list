@@ -17,10 +17,12 @@
 </table>
 </div>
 
-{{#if isOwner}}
+{{#with user}}
+{{#if isUser}}
 <p>that's you, you can add new links here:</p>
 	{{>addNewLink}}
 {{/if}}
+{{/with}}
 </template>
 
 
