@@ -8,8 +8,9 @@
 			<td><p style="min-width: 200px;" >{{{comment}}}</p></td>
 		</tr>
 		{{/each}}
-
+  {{#if currentUser}}
 {{>addComment}}
+{{/if}}
 </table>
 </template>
 

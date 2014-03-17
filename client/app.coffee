@@ -4,10 +4,10 @@ Template.userList.users = ->
 	Meteor.users.find()
 
 Handlebars.registerHelper "isUser",->
-	@?._id == Meteor?.user()?._id
+	Meteor.user()? && @?._id == Meteor?.user()?._id
 	
 Handlebars.registerHelper "isOwner",->
-	@userID == Meteor.user()?._id
+	Meteor.user()? && @userID == Meteor.user()._id
 	
 Handlebars.registerHelper 'numberOfLinks', ->
 	Links.find userID: @_id

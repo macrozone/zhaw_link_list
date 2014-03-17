@@ -15,11 +15,9 @@
     {{>header}}
 
 <div class="container">
-     {{#if currentUser}}
+   
         {{yield}}
-    {{else}}
-        {{>notLoggedIn}}
-    {{/if}}
+   
     </div>
 </template>
 
@@ -54,7 +52,13 @@
 
    <p>you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-) </p>
    <p>please add change requests to <a href="https://github.com/macrozone/zhaw_link_list" target="_blank">github</a> issue list</p>
-  
+  <h3>What's new</h3>
+  <ul>
+  <li>Added Comments</li>
+  <li>Comments trigger now notification Email</li>
+  <li>You can use the app also when not logged in. Login-Process currently takes a lot of time on mobile phones, have to figure out why</li>
+  <li>Disabled websockets currently, they don't work on my server anymore...</li>
+  </ul>
     <h2>all users</h2>
     {{>userList}}
 
