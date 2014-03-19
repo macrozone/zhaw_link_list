@@ -2,6 +2,13 @@
 
 <template name="user">
 <h1>Links of {{#with user}}{{username}}{{/with}}</h1>
+{{#with user}}
+{{#if isUser}}
+<p>that's you, you can add new links here:</p>
+	{{>addNewLink}}
+{{/if}}
+{{/with}}
+
 <div class="table-responsive">
 <table class="table">
 
@@ -17,19 +24,7 @@
 </table>
 </div>
 
-{{#with user}}
-{{#if isUser}}
-<p>that's you, you can add new links here:</p>
-	{{>addNewLink}}
-{{/if}}
-{{/with}}
+
 </template>
 
 
-<template name="addNewLink">
-<input type="text" class="link-topic" placeholder="topic" /><br /><br />
-<input type="text" class="link-url" placeholder="url" /><br /><br />
-<input type="text" class="link-label" placeholder="label" />
-<br/><br />
-<button class="btn-save btn btn-default">add</button>
-</template>
