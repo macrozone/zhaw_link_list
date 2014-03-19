@@ -1,0 +1,62 @@
+<template name="home">
+
+	{{>userWelcomeMessage}}
+	{{>infos}}
+
+
+
+
+	{{>userList}}
+
+
+
+</template>
+
+
+<template name="infos">
+<h1>ZHAW link list</h1>
+
+<div class="alert alert-info alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>Looking for contributors!</strong> If you like to try out <a target="_blank" href="http://meteor.com">Meteor</a> or like <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a> you are very welcome to add more features here!
+</div>
+
+
+	<p>you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-) </p>
+	<p>please add change requests to <a href="https://github.com/macrozone/zhaw_link_list" target="_blank">github</a> issue list</p>
+	<h3>What's new</h3>
+	<ul>
+		<li>Added Comments</li>
+		<li>Comments trigger now notification Email</li>
+		<li>You can use the app also when not logged in. Login-Process currently takes a lot of time on mobile phones, have to figure out why</li>
+		<li>Disabled websockets currently, they don't work on my server anymore...</li>
+	</ul>
+	</template>
+<template name="userList">
+	<h2>all users</h2>
+	<ul class="userList">
+		{{#each users}}
+		<li {{#if isUser}}class="you"{{/if}}>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></li>
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="userWelcomeMessage">
+	{{#with currentUser}}
+	<p><em>Hello <strong>{{username}}</strong>, you have {{>numberOfLinksBadge}} links shared</em></p>
+	{{/with}}
+</template>
+
+
+<template name="numberOfLinksBadge">
+	<span class="badge badge">{{numberOfLinks}}</span>
+</template>
+
+<template name="profilePicture">
+	{{#if services.google.picture}}
+	<img src="{{services.google.picture}}" height="50px"/>
+	{{else}}
+	<img src="/no-pic.jpg" height="50px"/>
+	{{/if}}
+</template>
