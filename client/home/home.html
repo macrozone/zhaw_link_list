@@ -1,25 +1,19 @@
 <template name="home">
 
-	{{>userWelcomeMessage}}
-	{{>infos}}
-
-
-
-
-	{{>userList}}
-
-
+	{{>home_userWelcomeMessage}}
+	{{>home_infos}}
+	{{>home_userList}}
 
 </template>
 
 
-<template name="infos">
-<h1>ZHAW link list</h1>
+<template name="home_infos">
+	<h1>ZHAW link list</h1>
 
-<div class="alert alert-info alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-  <strong>Looking for contributors!</strong> If you like to try out <a target="_blank" href="http://meteor.com">Meteor</a> or like <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a> you are very welcome to add more features here!
-</div>
+	<div class="alert alert-info alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<strong>Looking for contributors!</strong> If you like to try out <a target="_blank" href="http://meteor.com">Meteor</a> or like <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a> you are very welcome to add more features here!
+	</div>
 
 
 	<p>you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-) </p>
@@ -31,10 +25,10 @@
 		<li>You can use the app also when not logged in. Login-Process currently takes a lot of time on mobile phones, have to figure out why</li>
 		<li>Disabled websockets currently, they don't work on my server anymore...</li>
 	</ul>
-	</template>
-<template name="userList">
+</template>
+<template name="home_userList">
 	<h2>all users</h2>
-	<ul class="userList">
+	<ul class="home_userList">
 		{{#each users}}
 		<li {{#if isUser}}class="you"{{/if}}>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></li>
 		{{/each}}
@@ -42,7 +36,7 @@
 
 </template>
 
-<template name="userWelcomeMessage">
+<template name="home_userWelcomeMessage">
 	{{#with currentUser}}
 	<p><em>Hello <strong>{{username}}</strong>, you have {{>numberOfLinksBadge}} links shared</em></p>
 	{{/with}}
