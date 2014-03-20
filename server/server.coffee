@@ -16,24 +16,29 @@ sendMessageToUsers = (message, users) ->
 		message.to = getEmailFrom user	
 		if message.to then Email.send message
 			
-			
+
+sendMessageToClassVerteiler = (message) ->
+	message.to = "zhaw.klassenverteiler@gmail.com"
+	Email.send message			
 
 notifyAllUsersAboutLink = (link) ->
 	authorUser = Meteor.users.findOne _id: link.userID
 	authorEmail = getEmailFrom authorUser
-	users = Meteor.users.find _id: $ne: link.userID
+	
 	url = getFullUrlFor link.userID
 	message = 
 			from: authorEmail
 			subject: "ZHAW List, new Link added"
 			html: "<p><strong>#{authorEmail}</strong> added a new link for the topic <em>#{link.topic}</em>:<br/><br/><a href='#{link.url}'>#{link.label}</a><br/></p><p>Click <a href='#{url}'>here</a> to see all his links</p>"
 
-	sendMessageToUsers message, users
+	#users = Meteor.users.find _id: $ne: link.userID
+	#sendMessageToUsers message, users
+	sendMessageToClassVerteiler message
 
 notifyAllUsersAboutComment = (comment) ->
 	authorUser = Meteor.users.findOne _id: comment.userID
 	link = Links.findOne _id: comment.linkID
-	users = Meteor.users.find _id: $ne: comment.userID
+	
 	url = getFullUrlFor link.userID
 	authorEmail = getEmailFrom authorUser
 	message = 
@@ -41,8 +46,9 @@ notifyAllUsersAboutComment = (comment) ->
 			subject: "ZHAW List, new Comment added"
 			html: "<p><strong>#{authorEmail}</strong> added a Comment for the link <a href='#{link.url}'>#{link.label}</a>:<br/></p><p><em>#{comment.comment}</em></p><p>Click <a href='#{url}'>here</a> to see all his links</p>"
 
-	sendMessageToUsers message, users
-		
+	#users = Meteor.users.find _id: $ne: comment.userID
+	#sendMessageToUsers message, users
+	sendMessageToClassVerteiler message
 
 Meteor.methods
 	addComment: (comment) ->
