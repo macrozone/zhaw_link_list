@@ -1,0 +1,13 @@
+{
+  "name": "chatworks",
+  "description": "Add chat to any Meteor project",
+  "homepage": "https://github.com/Pent/chatworks",
+  "author": "Jonathan Pidgeon <jon@empire5design.com>",
+  "version": "1.6.0",
+  "git": "https://github.com/Pent/chatworks.git",
+  "packages": {
+    "headers": {
+      "git": "http://github.com/gadicohen/meteor-headers"
+    }
+  }
+}
