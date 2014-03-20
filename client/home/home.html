@@ -30,7 +30,7 @@
 	<h2>all users</h2>
 	<div class="home_userList">
 		{{#each users}}
-		<div class="user col-sm-6 {{#if isUser}}you{{/if}}">{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></div>
+		<div class="user col-xs-12 col-sm-6 col-md-4 {{#if isUser}}you{{/if}}">{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></div>
 		{{/each}}
 	</div>
 
