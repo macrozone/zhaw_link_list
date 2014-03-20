@@ -6,7 +6,8 @@
       "bootstrap-3": {},
       "accounts-ui-bootstrap-3": {},
       "handlebar-helpers": {},
-      "moment": {}
+      "moment": {},
+      "chatworks": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +34,16 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.5.1",
         "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
+      "chatworks": {
+        "git": "https://github.com/Pent/chatworks.git",
+        "tag": "v1.6.0",
+        "commit": "fed449859aff1a8a18626c6c33436e6a88ca6560"
+      },
+      "headers": {
+        "git": "http://github.com/gadicohen/meteor-headers",
+        "branch": "master",
+        "commit": "712d0ff43f4d5e3549ccd1a844c298645fb5b2a4"
       }
     }
   }
