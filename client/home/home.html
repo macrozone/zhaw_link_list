@@ -28,11 +28,11 @@
 </template>
 <template name="home_userList">
 	<h2>all users</h2>
-	<ul class="home_userList">
+	<div class="home_userList">
 		{{#each users}}
-		<li {{#if isUser}}class="you"{{/if}}>{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></li>
+		<div class="user col-sm-6 {{#if isUser}}you{{/if}}">{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></div>
 		{{/each}}
-	</ul>
+	</div>
 
 </template>
 
