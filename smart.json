@@ -5,6 +5,7 @@
     "accounts-ui-bootstrap-3": {},
     "handlebar-helpers": {},
     "moment": {},
-    "chatworks": {}
+    "chatworks": {},
+    "superchat-streams": {}
   }
 }
