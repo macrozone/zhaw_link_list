@@ -14,17 +14,19 @@
 		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 		<strong>Looking for contributors!</strong> If you like to try out <a target="_blank" href="http://meteor.com">Meteor</a> or like <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a> you are very welcome to add more features here!
 	</div>
+	{{#markdown}}
 
+you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-)
+please add change requests to [github](https://github.com/macrozone/zhaw_link_list) issue list
+### What's new
+- Comments now are interpreted as Markdown
+- added experimental Chat (Mir isch langwiilig gsi i de digitaltechnik...)
+- Added Comments
+- Comments trigger now notification Email
+- You can use the app also when not logged in. Login-Process currently takes a lot of time on mobile phones, have to figure out why
+- Disabled websockets currently, they don't work on my server anymore...
 
-	<p>you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-) </p>
-	<p>please add change requests to <a href="https://github.com/macrozone/zhaw_link_list" target="_blank">github</a> issue list</p>
-	<h3>What's new</h3>
-	<ul>
-		<li>Added Comments</li>
-		<li>Comments trigger now notification Email</li>
-		<li>You can use the app also when not logged in. Login-Process currently takes a lot of time on mobile phones, have to figure out why</li>
-		<li>Disabled websockets currently, they don't work on my server anymore...</li>
-	</ul>
+	{{/markdown}}
 </template>
 <template name="home_userList">
 	<h2>all users</h2>
