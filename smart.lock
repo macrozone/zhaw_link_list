@@ -7,7 +7,8 @@
       "accounts-ui-bootstrap-3": {},
       "handlebar-helpers": {},
       "moment": {},
-      "chatworks": {}
+      "chatworks": {},
+      "superchat-streams": {}
     },
     "packages": {
       "iron-router": {
@@ -40,10 +41,35 @@
         "tag": "v1.6.0",
         "commit": "fed449859aff1a8a18626c6c33436e6a88ca6560"
       },
+      "superchat-streams": {
+        "git": "https://github.com/gabrielhpugliese/meteor_superchat_streams",
+        "tag": "v0.6.0b",
+        "commit": "41168d7e6a65410a7f53d0c6ffc313e0c685b5e2"
+      },
       "headers": {
         "git": "http://github.com/gadicohen/meteor-headers",
         "branch": "master",
         "commit": "712d0ff43f4d5e3549ccd1a844c298645fb5b2a4"
+      },
+      "marked": {
+        "git": "https://github.com/chuangbo/meteor-marked.git",
+        "tag": "v0.3.1",
+        "commit": "3d9a9c94793b20e1ee7c807931cb536010d6f820"
+      },
+      "presence": {
+        "git": "https://github.com/dburles/meteor-presence.git",
+        "tag": "v0.4.3",
+        "commit": "8bfcae844195ff5681a123cb4302af9e719663ac"
+      },
+      "collection-hooks": {
+        "git": "https://github.com/matb33/meteor-collection-hooks.git",
+        "tag": "v0.6.3",
+        "commit": "70f2598bf991cb36effd72aea2555cba96f88355"
+      },
+      "streams": {
+        "git": "https://github.com/arunoda/meteor-streams.git",
+        "tag": "v0.1.17",
+        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
       }
     }
   }
