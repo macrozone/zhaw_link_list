@@ -10,15 +10,7 @@ Handlebars.registerHelper 'numberOfLinks', ->
 	.count()
 
 Handlebars.registerHelper 'username', ->
-
-	if @profile? and @profile.name?
-		@profile.name
-	else if @username?
-		@username
-	else if @services.github.username?
-		@services.github.username
-	else
-		@_id
+	getUsername @
 
 DateFormats = 
        short: "DD.MM.YYYY",
@@ -31,3 +23,6 @@ Handlebars.registerHelper "formatDate", (datetime, format) ->
     moment(datetime).format f
   else
     datetime
+
+Handlebars.registerHelper "log", ->
+	console.log arguments

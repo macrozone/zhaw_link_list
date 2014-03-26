@@ -9,20 +9,7 @@
 	{{/if}}
 	{{/with}}
 
-	<div class="table-responsive">
-		<table class="table">
-
-			<tr>
-				<th>Topic</th><th>Link</th><th width="60%">Comments</th>
-				{{#if isOwner}}
-				<th>options</th>
-				{{/if}}
-			</tr>
-			{{#each links}}
-				{{>oneLink}}
-			{{/each}}
-		</table>
-	</div>
+	{{>linkTable linkTableConfig}}
 
 
 </template>

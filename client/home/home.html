@@ -35,7 +35,15 @@ please add change requests to [github](https://github.com/macrozone/zhaw_link_li
 		<div class="user col-xs-12 col-sm-6 col-md-4 col-lg-3 {{#if isUser}}you{{/if}}">{{>profilePicture}} {{>numberOfLinksBadge}} <a href="{{pathFor 'user'}}">{{username}}  {{#if isUser}}(you){{/if}}</a></div>
 		{{/each}}
 	</div>
+ <div class="clearfix"></div>
+	<h2>All Links</h2>
+	{{>home_links}}
 
+</template>
+
+<template name="home_links">
+
+{{>linkTable config}}
 </template>
 
 <template name="home_userWelcomeMessage">

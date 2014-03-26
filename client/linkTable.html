@@ -1,0 +1,19 @@
+<template name="linkTable">
+<div class="table-responsive">
+
+		<table class="table">
+
+			<tr>
+				<th>Topic</th>{{#if showUser}}<th>user</th>{{/if}}<th>Link</th>{{#if showComments}}<th width="60%">Comments</th>{{/if}}
+				{{#if isOwner}}
+				<th>options</th>
+				{{/if}}
+
+			</tr>
+			{{#each links}}
+				{{>oneLink}}
+			
+			{{/each}}
+		</table>
+	</div>
+	</template>

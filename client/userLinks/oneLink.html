@@ -2,12 +2,16 @@
 
 <tr>
 <td>{{topic}}</td>
+{{#if showUser}}
+{{#with user}}
+<td><a href="{{pathFor 'user'}}">{{username}}</a></td>
+{{/with}}
+{{/if}}
 
 <td><a target="_blank" href="{{url}}">{{label}}</a></td>
-
-<td>
-{{>comments}}
-</td>
+{{#if showComments}}
+<td>{{>comments}}</td>
+{{/if}}
 {{#if isOwner}}
 	<td>
 		<button type="button" class="btn-remove btn btn-warning">
