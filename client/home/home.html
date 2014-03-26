@@ -2,7 +2,11 @@
 
 	{{>home_userWelcomeMessage}}
 	{{>home_infos}}
-		{{>home_links}}
+
+	{{>home_links}}
+	{{#if currentUser}}
+	{{>addNewLink}}
+	{{/if}}
 	{{>home_userList}}
 
 </template>
@@ -20,7 +24,8 @@
 you can add your links here. Currently, you can't edit them, but delete them. I'll add more functionality later ;-)
 please add change requests to [github](https://github.com/macrozone/zhaw_link_list) issue list
 ### What's new
-- added all links on frontpage (needs refactoring though)
+- you can add now links to the frontpage
+- added all links on frontpage 
 - Comments now are interpreted as Markdown
 - added experimental Chat (Mir isch langwiilig gsi i de digitaltechnik...)
 - Added Comments
