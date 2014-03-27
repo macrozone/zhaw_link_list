@@ -5,6 +5,9 @@ Router.configure layoutTemplate: 'layout'
 @Comments = new Meteor.Collection "comments"
 
 Router.map ->
+  @route 'debug'
+  
+Router.map ->
   @route 'home',
     path: "/"
 
