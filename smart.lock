@@ -4,32 +4,27 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "accounts-ui-bootstrap-3": {},
       "handlebar-helpers": {},
       "moment": {},
       "chatworks": {},
-      "superchat-streams": {}
+      "superchat-streams": {},
+      "accounts-ui-bootstrap-3-blaze": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.4",
-        "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
         "tag": "v3.1.1-1",
         "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
-      "accounts-ui-bootstrap-3": {
-        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.2.6",
-        "commit": "f3ee0ef6bc506314e19585550b4f9f5620c4ada6"
-      },
       "handlebar-helpers": {
         "git": "https://github.com/raix/Meteor-handlebar-helpers.git",
-        "tag": "v0.0.9",
-        "commit": "71e94c99462b8801a34c5363510758b6ff5f5ac7"
+        "tag": "v0.1.1",
+        "commit": "0b407ab65e7c1ebd53d71aef0de2e2c1d21a597c"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
@@ -46,15 +41,25 @@
         "tag": "v0.6.0b",
         "commit": "41168d7e6a65410a7f53d0c6ffc313e0c685b5e2"
       },
+      "accounts-ui-bootstrap-3-blaze": {
+        "git": "https://github.com/rajit/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.0",
+        "commit": "b06c39aa4520c4ad022d2610f40ff47148415cab"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
       "headers": {
-        "git": "http://github.com/gadicohen/meteor-headers",
+        "git": "https://github.com/gadicohen/meteor-headers",
         "branch": "master",
-        "commit": "712d0ff43f4d5e3549ccd1a844c298645fb5b2a4"
+        "commit": "569a50eb334cc1ab324d0721411f48f1cc75ec24"
       },
       "marked": {
         "git": "https://github.com/chuangbo/meteor-marked.git",
-        "tag": "v0.3.1",
-        "commit": "3d9a9c94793b20e1ee7c807931cb536010d6f820"
+        "tag": "v0.3.2",
+        "commit": "850f63135cdeb05344c420bd586fd8af9cab75df"
       },
       "presence": {
         "git": "https://github.com/dburles/meteor-presence.git",
@@ -70,6 +75,11 @@
         "git": "https://github.com/arunoda/meteor-streams.git",
         "tag": "v0.1.17",
         "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
+      },
+      "inject-initial": {
+        "git": "https://github.com/gadicc/meteor-inject-initial.git",
+        "tag": "v0.0.7",
+        "commit": "921a944815e06ece8ce4ded180e9d2e9e31f6000"
       }
     }
   }

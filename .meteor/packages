@@ -6,13 +6,10 @@
 standard-app-packages
 autopublish
 insecure
-preserve-inputs
 coffeescript
 stylus
-iron-router
 bootstrap-3
 accounts-facebook
-accounts-ui-bootstrap-3
 accounts-google
 accounts-github
 accounts-password
@@ -22,3 +19,5 @@ moment
 chatworks
 showdown
 facts
+accounts-ui-bootstrap-3-blaze
+iron-router
